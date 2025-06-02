@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './Styles/TabelaComponent.css';
 import api from '../api';
 
 export default function TabelaUsuarios() {

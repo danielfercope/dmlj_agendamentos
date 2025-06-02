@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Styles/Forms.css'
 import api from '../api';
 
 export default function UsuarioForm({ onSuccess }) {

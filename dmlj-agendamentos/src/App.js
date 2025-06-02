@@ -1,25 +1,27 @@
-import UsuarioForm from './components/UsuarioForm';
-import TabelaUsuarios from './components/TabelaUsuarios';
-import TabelaEmpresas from './components/TabelaEmpresas';
-import EmpresaForm from './components/EmpresaForm';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Sidebar from './components/SidebarOpcoes';
+import CadastroUsuario from './components/CadastroUsuario';
+import CadastroEmpresa from './components/CadastroEmpresa';
+import Home from './components/Home';
 
 function App() {
   return (
-    <div style={{ padding: '20px' }}>
-      <div>
-        <h1>Cadastro de Usuários</h1>
-        <UsuarioForm onSuccess={() => window.location.reload()} />
-        <TabelaUsuarios />
-      </div>
+    <Router>
+      <div style={{ display: 'flex', height: '100vh', minHeight: '100vh' }}>
+        <Sidebar />
 
-      <div>
-        <h1>Cadastro de Empresas</h1>
-        <EmpresaForm onSuccess={() => window.location.reload()} />
-        <TabelaEmpresas />
+        <main style={{
+           flexGrow: 1,
+            height: '100%'  // <-- i
+        }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/usuarios" element={<CadastroUsuario />} />
+            <Route path="/empresas" element={<CadastroEmpresa />} />
+          </Routes>
+        </main>
       </div>
-    </div>
-
-    //necessario ainda colocar os outros componentes para funcionar (Agendamento e Servico)
+    </Router>
   );
 }
 

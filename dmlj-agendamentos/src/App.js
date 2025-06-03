@@ -2,6 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/SidebarOpcoes';
 import CadastroUsuario from './components/CadastroUsuario';
 import CadastroEmpresa from './components/CadastroEmpresa';
+import CadastroServico from './components/CadastroServico';
+import CadastroAgendamento from './components/CadastroAgendamento';
+
 import Home from './components/Home';
 
 function App() {
@@ -12,12 +15,14 @@ function App() {
 
         <main style={{
            flexGrow: 1,
-            height: '100%'  // <-- i
+            height: '100%'  
         }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/usuarios" element={<CadastroUsuario />} />
             <Route path="/empresas" element={<CadastroEmpresa />} />
+            <Route path="/servicos" element={<CadastroServico />} />
+            <Route path="/agendamentos" element={<CadastroAgendamento />} />
           </Routes>
         </main>
       </div>

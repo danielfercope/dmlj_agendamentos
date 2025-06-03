@@ -10,6 +10,8 @@ export default function Sidebar() {
           <li><Link to="/">Inicio</Link></li>
           <li><Link to="/usuarios">Cadastro de Usuários</Link></li>
           <li><Link to="/empresas">Cadastro de Empresas</Link></li>
+          <li><Link to="/servicos">Cadastro de Servicos</Link></li>
+          <li><Link to="/agendamentos">Cadastro de Agendamentos</Link></li>
         </ul>
       </nav>
     </div>
